@@ -3,6 +3,7 @@ import random
 
 word_list = ['mango', 'banana', 'pear', 'apple', 'coconut']
 word = random.choice(word_list)
+#print(word)
 
 #%% checks if input is vallid
 while True:
@@ -11,3 +12,9 @@ while True:
         break
     else:
         print('Invalid letter.')
+
+#%% check wether the guess in the word
+if guess in word:
+    print(f'Good guess! "{guess}" is in the word.')
+else:
+    print(f'Sorry, "{guess}" is not in the word. Try again.')
