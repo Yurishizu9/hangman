@@ -5,7 +5,7 @@
 ## Milestone 1
 
 - I made a GitHub repository
-- The technologies I used where [[Milestone 1 Set up the environment#GitHub|Github]] and [[Milestone 1 Set up the environment#Git|Git]]
+- The technologies I used where [Github](https://github.com/) and [Git](https://git-scm.com/)
 - I used Git (a distributed version control system)  to record changes changes to my files overtime. I used GitHub to host my git repository.
  
 ```bash
