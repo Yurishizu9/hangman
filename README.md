@@ -32,3 +32,5 @@ clones an existing repository from GitHub onto your system
 git push
 ```
 pushes changes from your system to back to GitHub
+
+![image](https://user-images.githubusercontent.com/67028414/203396676-f37c457b-1174-44ff-a699-3eb1112de41b.png)
