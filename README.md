@@ -1,6 +1,6 @@
 # Hangman
 
-## [Milestone 1](#m1)
+## Milestone 1
 
 - I made a GitHub repository
 - The technologies I used where [Github](https://github.com/) and [Git](https://git-scm.com/)
