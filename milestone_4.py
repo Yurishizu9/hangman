@@ -45,7 +45,10 @@ class Hangman():
     
 
     def check_guess(self, guess):
-        '''check wether the guess is in the word
+        '''check wether the guess is in the word.
+        - if yes adds guess word guess.
+        - if not take a life away.
+        - add all guesses to list of guesses.
 
         Parameters
         ----------
@@ -67,7 +70,10 @@ class Hangman():
 
 
     def ask_for_input(self):
-        '''checks if user character input is vallid
+        '''asks for user character input and checks if it's vallid.
+        - if it is it calls check_guess
+        - if not ask for user input again
+
         '''
         while True:
             guess = input('Please, enter a single alphabetical character: ')
@@ -82,17 +88,3 @@ class Hangman():
 
 game_1 = Hangman(word_list)
 game_1.ask_for_input()
-
-'''
-# checks if user character input is vallid
-            break
-        else:
-            print('Invalid letter.')
-    check_guess(guess)
-
-#check wether the guess is in the word
-    else:
-        print(f'Sorry, "{guess}" is not in the word. Try again.')
-
-ask_for_input()
-'''
