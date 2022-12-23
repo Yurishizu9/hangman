@@ -374,4 +374,4 @@ I know that child classes can bypass raised `ModuleNotFoundError` in a parent c
 
 I have tried digging on the internet, but I can't seem to find anyone talking about this specific scenario of child classes bypassing that raised error in the parent class. I hope to bring it up to one of my mentors.
 
-There were some critical instruction. That were missed in the tasks. Which led to the bugs in milestone 5. I took the initiative to fix those bugs and will be letting one of the mentors know about it, so the newer students don't get completely lost.
+There were some critical instruction. That were missed in the tasks. Which led to the bugs in [Milestone 5](#milestone-5). I took the initiative to fix those bugs and will be letting one of the mentors know about it, so the newer students don't get completely lost.
