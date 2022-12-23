@@ -1,4 +1,3 @@
-#%% choose a random word from list
 import random
 
 word_list = ['mango', 'banana', 'pear', 'apple', 'coconut']
@@ -9,10 +8,10 @@ class Hangman():
 
         Parameters
         ----------
-        word_list : _type_
-            _description_
+        word_list : list
+            list of words to use for the game
         num_lives : int, optional
-            _description_, by default 5
+            chances for the player to make wrong guesses, by default 5
         
 
         Attributes
@@ -37,32 +36,63 @@ class Hangman():
                 
         '''
     def __init__(self, word_list, num_lives = 5):
-        
-        self.word = random.choice(word_list)
-        self.word_guessed = ['_'] * len(word)
-        self.num_letters = len(word)
+        self.word = 'pear'#random.choice(word_list)
+        self.word_guessed = ['_'] * len(self.word)
+        self.num_letters = len(self.word)
         self.num_lives = num_lives
         self.word_list = word_list
         self.list_of_guesses = []
+    
+
+    def check_guess(self, guess):
+        '''check wether the guess is in the word
+
+        Parameters
+        ----------
+        guess : str
+            players character input
+        '''
+        guess = guess.lower()
+        if guess in self.word:
+            print(f'Good guess! "{guess}" is in the word.')
+            for idx, x in enumerate(self.word):
+                if x == guess:
+                    self.word_guessed[idx] = x
+            self.num_letters -= 1
+        else:
+            self.num_lives -= 1
+            print(f'Sorry, {guess} is not in the word.')
+            print(f'You have {self.num_lives} lives left.')
+        self.list_of_guesses.append(guess)
 
 
+    def ask_for_input(self):
+        '''checks if user character input is vallid
+        '''
+        while True:
+            guess = input('Please, enter a single alphabetical character: ')
+            if len(guess) != 1 and guess.isalpha():
+                print('Invalid letter. Please, enter a single alphabetical character.')
+            elif guess in self.list_of_guesses:
+                print('You already tried that letter!')
+            else:
+                self.check_guess(guess)
+                self.list_of_guesses.append(guess)
 
-#%% checks if user character input is vallid
-def ask_for_input():
-    while True:
-        guess = input('Please, enter a single alphabetical character: ')
-        if len(guess) == 1 and guess.isalpha():
+
+game_1 = Hangman(word_list)
+game_1.ask_for_input()
+
+'''
+# checks if user character input is vallid
             break
         else:
             print('Invalid letter.')
     check_guess(guess)
 
-#%% check wether the guess is in the word
-def check_guess(guess):
-    guess = guess.lower()
-    if guess in word:
-        print(f'Good guess! "{guess}" is in the word.')
+#check wether the guess is in the word
     else:
         print(f'Sorry, "{guess}" is not in the word. Try again.')
 
 ask_for_input()
+'''
